@@ -1,7 +1,9 @@
 import re
 
-pattern_mobile = r"(?:0?9|\+?989)\d{2}\W?\d{3}\W?\d{4}"
-number = '9126548745'
-mobile_match = re.findall(pattern_mobile, number)
-if mobile_match:
-    print(number)
+pattern_name = r"^[\u0600-\u06FF\sA-Za-z]+$"
+name_1 = 'sepehr'
+name_2 = 'سپهر'
+name1_match = re.findall(pattern_name, name_1)
+name2_match = re.findall(pattern_name, name_2)
+if name1_match and name2_match:
+    print(name_1, name_2)
